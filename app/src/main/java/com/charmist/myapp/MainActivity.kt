@@ -21,5 +21,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btnLogin.setOnLongClickListener{
+            name = etName.text.toString()
+            val intent = Intent(this, SecondActivity::class.java)
+            intent.putExtra("name", "Hello")
+            startActivity(intent)
+            true
+        }
+
     }
 }
